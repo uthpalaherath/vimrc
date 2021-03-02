@@ -17,6 +17,11 @@
 " - vim-gitgutter
 " - vim-pydocstring
 " - YouCompleteMe
+" - vim-showmarks
+" - vim-slime
+" - vim-ipython-cell
+" - SimplyFold
+" - vim-fugitive
 "
 " author: Uthpala Herath
 " my fork: https://github.com/uthpalaherath/vimrc
@@ -156,6 +161,7 @@ let g:ycm_cache_omnifunc=0
 let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_autoclose_preview_window_after_completion = 1
 set completeopt-=preview
+nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 
 """ gitgutter
 let g:gitgutter_enabled = 1
@@ -167,11 +173,16 @@ highlight GitGutterDelete ctermfg=1
 highlight GitGutterChangeDelete ctermfg=4
 
 """ split screen shortcuts
-nnoremap <C-a>-- :new<CR>
-nnoremap <C-a>\\ :vnew<CR>
+nnoremap <C-W>- :new<CR>
+nnoremap <C-W>\ :vnew<CR>
+
+""" visual marks
+nnoremap <leader>m :DoShowMarks<cr>
 
 """ run python scripts within vim with F5
-autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
+"autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
 
 """ changesPlugin
 let g:changes_use_icons=0
@@ -180,7 +191,63 @@ let g:changes_use_icons=0
 ":let b:fortran_fixed_source=0
 ":set syntax=fortran
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" set nofoldenable
+set foldcolumn=0
+
+
 """ vim-pydocstring
-let g:pydocstring_doq_path = '~/anaconda3/bin/doq'
+let g:pydocstring_doq_path = '/usr/local/bin/doq'
 let g:pydocstring_formatter = 'numpy'
 let g:pydocstring_templates_path = '~/.vim_runtime/pydocstringtemplates'
+
+""" vim-slime
+let g:slime_target = "vimterminal"
+let g:ipython_cell_delimit_cells_by = "marks"
+" fix paste issues in ipython
+let g:slime_python_ipython = 1
+let g:slime_dont_ask_default = 1
+
+" map <Leader>s to start IPython
+"nnoremap <Leader>s :vert term <CR> :SlimeSend1 ipython --matplotlib<CR>
+nnoremap <Leader>s :vert term <CR> ipython --matplotlib<CR> <c-w><c-p> :SlimeConfig <CR>
+
+" map <Leader>r to run script
+nnoremap <Leader>r :IPythonCellRun<CR>
+
+" map <Leader>R to run script and time the execution
+nnoremap <Leader>R :IPythonCellRunTime<CR>
+
+" map <Leader>c to execute the current cell
+nnoremap <Leader>c :IPythonCellExecuteCell<CR>
+
+" map <Leader>C to execute the current cell and jump to the next cell
+nnoremap <Leader>C :IPythonCellExecuteCellJump<CR>
+
+" map <Leader>l to clear IPython screen
+nnoremap <Leader>l :IPythonCellClear<CR>
+
+" map <Leader>x to close all Matplotlib figure windows
+nnoremap <Leader>x :IPythonCellClose<CR>
+
+" map [c and ]c to jump to the previous and next cell header
+nnoremap [c :IPythonCellPrevCell<CR>
+nnoremap ]c :IPythonCellNextCell<CR>
+
+" map <Leader>h to send the current line or current selection to IPython
+nmap <Leader>h <Plug>SlimeLineSend
+xmap <Leader>h <Plug>SlimeRegionSend
+
+" map <Leader>p to run the previous command
+"nnoremap <Leader>p :IPythonCellPrevCommand<CR>
+
+" map <Leader>Q to restart ipython
+nnoremap <Leader>Q :IPythonCellRestart<CR>
+
+" map <Leader>d to start debug mode
+nnoremap <Leader>d :SlimeSend1 %debug<CR>
+
+" map <Leader>q to exit debug mode or IPython
+nnoremap <Leader>q :SlimeSend1 exit<CR>
