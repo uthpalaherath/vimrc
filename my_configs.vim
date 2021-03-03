@@ -22,6 +22,8 @@
 " - vim-ipython-cell
 " - SimplyFold
 " - vim-fugitive
+" - vim-startify
+" - vim-maximizer
 "
 " author: Uthpala Herath
 " my fork: https://github.com/uthpalaherath/vimrc
@@ -247,7 +249,21 @@ xmap <Leader>h <Plug>SlimeRegionSend
 nnoremap <Leader>Q :IPythonCellRestart<CR>
 
 " map <Leader>d to start debug mode
-nnoremap <Leader>d :SlimeSend1 %debug<CR>
+"nnoremap <Leader>d :SlimeSend1 %debug<CR>
 
 " map <Leader>q to exit debug mode or IPython
-nnoremap <Leader>q :SlimeSend1 exit<CR>
+"nnoremap <Leader>q :SlimeSend1 exit<CR>
+
+""" Startify
+let g:startify_session_persistence = 1
+let g:startify_lists = [
+      \ { 'type': 'sessions',  'header': ['   Sessions']       },
+      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+      \ ]
+let g:startify_bookmarks = [ '~/.vim_runtime/my_configs.vim' ]
+
+""" vim-maximizer
+let g:maximizer_default_mapping_key = '<C-W>z'
+nnoremap <silent><C-W>z :MaximizerToggle<CR>
+vnoremap <silent><C-W>z :MaximizerToggle<CR>gv
+inoremap <silent><C-W>z <C-o>:MaximizerToggle<CR>
