@@ -28,6 +28,9 @@
 " author: Uthpala Herath
 " my fork: https://github.com/uthpalaherath/vimrc
 
+:set encoding=utf-8
+:set fileencoding=utf-8
+
 """ vim settings
 :set splitright
 :set splitbelow
