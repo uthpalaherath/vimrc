@@ -270,3 +270,6 @@ let g:maximizer_default_mapping_key = '<C-W>z'
 nnoremap <silent><C-W>z :MaximizerToggle<CR>
 vnoremap <silent><C-W>z :MaximizerToggle<CR>gv
 inoremap <silent><C-W>z <C-o>:MaximizerToggle<CR>
+
+""" snip-mate
+let g:snipMate = { 'snippet_version' : 1 }
