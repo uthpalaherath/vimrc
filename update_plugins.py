@@ -57,14 +57,6 @@ vim-ruby https://github.com/vim-ruby/vim-ruby
 typescript-vim https://github.com/leafgarland/typescript-vim
 vim-javascript https://github.com/pangloss/vim-javascript
 vim-python-pep8-indent https://github.com/Vimjas/vim-python-pep8-indent
-molokai https://github.com/tomasr/molokai.git
-indentLine https://github.com/Yggdroot/indentLine.git
-YouCompleteMe https://github.com/ycm-core/YouCompleteMe.git
-vim-gitgutter https://github.com/airblade/vim-gitgutter.git
-changesPluging https://github.com/chrisbra/changesPlugin.git
-vim-pydocstring https://github.com/heavenshell/vim-pydocstring.git
-vim-autoread https://github.com/djoshea/vim-autoread.git
-
 """.strip()
 
 GITHUB_ZIP = "%s/archive/master.zip"
