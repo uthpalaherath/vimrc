@@ -36,19 +36,20 @@
 :set splitbelow
 
 " start in insert mode only if file is empty
-function InsertIfEmpty()
-    if @% == ""
-        " No filename for current buffer
-        startinsert
-    elseif filereadable(@%) == 0
-        " File doesn't exist yet
-        startinsert
-    elseif line('$') == 1 && col('$') == 1
-        " File is empty
-        startinsert
-    endif
-endfunction
-au VimEnter * call InsertIfEmpty()
+autocmd BufNewFile * startinsert
+" function InsertIfEmpty()
+"     if @% == ""
+"         " No filename for current buffer
+"         startinsert
+"     elseif filereadable(@%) == 0
+"         " File doesn't exist yet
+"         startinsert
+"     elseif line('$') == 1 && col('$') == 1
+"         " File is empty
+"         startinsert
+"     endif
+" endfunction
+" au VimEnter * call InsertIfEmpty()
 
 """ indentLine
 let g:indentLine_char = '¦'
@@ -159,7 +160,6 @@ vnoremap <silent> P "_dp
 au FileType * set fo-=c fo-=r fo-=o
 
 """ YCM options
-let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_complete_in_comments=0
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_min_num_of_chars_for_completion=1
@@ -167,7 +167,11 @@ let g:ycm_cache_omnifunc=0
 let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
-set completeopt-=preview
+let g:ycm_auto_hover=''
+"set updatetime=1000
+"set completeopt-=preview
+set completeopt+=popup
+nmap <leader>d <plug>(YCMHover)
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 
 """ gitgutter
