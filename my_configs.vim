@@ -154,7 +154,7 @@ vnoremap <silent> P "_dp
 
 """ multi-platform clipboard
 " set clipboard^=unnamed,unnamedplus
-" set clipboard=unnamedplus
+set clipboard=unnamedplus
 
 """ Get rid of annoying autocomment in new line
 au FileType * set fo-=c fo-=r fo-=o
@@ -168,6 +168,7 @@ let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_auto_hover=''
+let g:ycm_goto_buffer_command = 'new-or-existing-tab'
 "set updatetime=1000
 "set completeopt-=preview
 set completeopt+=popup
