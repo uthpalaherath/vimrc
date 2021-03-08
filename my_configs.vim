@@ -256,7 +256,10 @@ xmap <Leader>h <Plug>SlimeRegionSend
 "nnoremap <Leader>p :IPythonCellPrevCommand<CR>
 
 " map <Leader>Q to restart ipython
-nnoremap <Leader>q :IPythonCellRestart<CR>
+nnoremap <Leader>qq :IPythonCellRestart<CR>
+
+" map <Leader> q to reset variables
+nnoremap <Leader>q :SlimeSend1 %reset -f<CR>
 
 " map <Leader>d to start debug mode
 "nnoremap <Leader>d :SlimeSend1 %debug<CR>
