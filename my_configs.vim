@@ -17,7 +17,7 @@
 " - vim-gitgutter
 " - vim-pydocstring
 " - YouCompleteMe
-" - vim-showmarks
+" - vim-signature
 " - vim-slime
 " - vim-ipython-cell
 " - SimplyFold
@@ -189,7 +189,7 @@ nnoremap <C-W>- :new<CR>
 nnoremap <C-W>\ :vnew<CR>
 
 """ visual marks
-nnoremap <leader>m :DoShowMarks<cr>
+nnoremap <leader>m :SignatureRefresh<cr>
 
 """ run python scripts within vim with F5
 "autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
@@ -256,7 +256,7 @@ xmap <Leader>h <Plug>SlimeRegionSend
 "nnoremap <Leader>p :IPythonCellPrevCommand<CR>
 
 " map <Leader>Q to restart ipython
-nnoremap <Leader>Q :IPythonCellRestart<CR>
+nnoremap <Leader>q :IPythonCellRestart<CR>
 
 " map <Leader>d to start debug mode
 "nnoremap <Leader>d :SlimeSend1 %debug<CR>
