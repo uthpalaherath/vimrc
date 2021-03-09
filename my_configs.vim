@@ -153,8 +153,8 @@ vnoremap <silent> p "_dP
 vnoremap <silent> P "_dp
 
 """ multi-platform clipboard
-" set clipboard^=unnamed,unnamedplus
-set clipboard=unnamedplus
+"set clipboard^=unnamed,unnamedplus
+"set clipboard=unnamedplus
 
 """ Get rid of annoying autocomment in new line
 au FileType * set fo-=c fo-=r fo-=o
