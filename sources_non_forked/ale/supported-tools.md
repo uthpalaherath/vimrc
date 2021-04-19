@@ -118,6 +118,7 @@ formatting.
 * Cucumber
   * [cucumber](https://cucumber.io/)
 * CUDA
+  * [clangd](https://clang.llvm.org/extra/clangd.html)
   * [nvcc](http://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html)
 * Cypher
   * [cypher-lint](https://github.com/cleishm/libcypher-parser)
@@ -135,6 +136,8 @@ formatting.
   * [dartanalyzer](https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli) :floppy_disk:
   * [dartfmt](https://github.com/dart-lang/sdk/tree/master/utils/dartfmt)
   * [language_server](https://github.com/natebosch/dart_language_server)
+* desktop
+  * [desktop-file-validate](https://www.freedesktop.org/wiki/Software/desktop-file-utils/)
 * Dhall
   * [dhall-format](https://github.com/dhall-lang/dhall-lang)
   * [dhall-freeze](https://github.com/dhall-lang/dhall-lang)
@@ -225,10 +228,11 @@ formatting.
 * HCL
   * [terraform-fmt](https://github.com/hashicorp/terraform)
 * HTML
-  * [HTMLHint](http://htmlhint.com/)
   * [alex](https://github.com/wooorm/alex) :floppy_disk:
+  * [angular](https://www.npmjs.com/package/@angular/language-server)
   * [fecs](http://fecs.baidu.com/)
   * [html-beautify](https://beautifier.io/)
+  * [htmlhint](http://htmlhint.com/)
   * [prettier](https://github.com/prettier/prettier)
   * [proselint](http://proselint.com/)
   * [tidy](http://www.html-tidy.org/)
@@ -324,6 +328,7 @@ formatting.
   * nimpretty
 * nix
   * [nix-instantiate](http://nixos.org/nix/manual/#sec-nix-instantiate)
+  * [nixfmt](https://github.com/serokell/nixfmt)
   * [nixpkgs-fmt](https://github.com/nix-community/nixpkgs-fmt)
   * [rnix-lsp](https://github.com/nix-community/rnix-lsp)
 * nroff
@@ -349,6 +354,8 @@ formatting.
   * [ibm_validator](https://github.com/IBM/openapi-validator)
   * [prettier](https://github.com/prettier/prettier)
   * [yamllint](https://yamllint.readthedocs.io/)
+* Pascal
+  * [ptop](https://www.freepascal.org/tools/ptop.var)
 * Pawn
   * [uncrustify](https://github.com/uncrustify/uncrustify)
 * Perl
@@ -387,6 +394,7 @@ formatting.
   * [swipl](https://github.com/SWI-Prolog/swipl-devel)
 * proto
   * [protoc-gen-lint](https://github.com/ckaznocha/protoc-gen-lint)
+  * [protolint](https://github.com/yoheimuta/protolint)
 * Pug
   * [pug-lint](https://github.com/pugjs/pug-lint)
 * Puppet
@@ -495,11 +503,16 @@ formatting.
   * [stylelint](https://github.com/stylelint/stylelint)
 * SugarSS
   * [stylelint](https://github.com/stylelint/stylelint)
+* Svelte
+  * [prettier](https://github.com/prettier/prettier)
+  * [svelteserver](https://github.com/sveltejs/language-tools/tree/master/packages/language-server)
 * Swift
   * [Apple swift-format](https://github.com/apple/swift-format)
   * [sourcekit-lsp](https://github.com/apple/sourcekit-lsp)
   * [swiftformat](https://github.com/nicklockwood/SwiftFormat)
   * [swiftlint](https://github.com/realm/SwiftLint)
+* systemd
+  * [systemd-analyze](https://www.freedesktop.org/software/systemd/man/systemd-analyze.html) :floppy_disk:
 * Tcl
   * [nagelfar](http://nagelfar.sourceforge.net) :floppy_disk:
 * Terraform
@@ -531,6 +544,9 @@ formatting.
   * [tslint](https://github.com/palantir/tslint)
   * [tsserver](https://github.com/Microsoft/TypeScript/wiki/Standalone-Server-%28tsserver%29)
   * typecheck
+* V
+  * [v](https://github.com/vlang/v/)
+  * [vfmt](https://github.com/vlang/v/)
 * VALA
   * [uncrustify](https://github.com/uncrustify/uncrustify)
   * [vala_lint](https://github.com/vala-lang/vala-lint) :floppy_disk:

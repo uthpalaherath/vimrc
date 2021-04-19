@@ -112,7 +112,7 @@ let s:default_registry = {
 \   },
 \   'prettier': {
 \       'function': 'ale#fixers#prettier#Fix',
-\       'suggested_filetypes': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'json5', 'graphql', 'markdown', 'vue', 'html', 'yaml', 'openapi', 'ruby'],
+\       'suggested_filetypes': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'json5', 'graphql', 'markdown', 'vue', 'svelte', 'html', 'yaml', 'openapi', 'ruby'],
 \       'description': 'Apply prettier to a file.',
 \   },
 \   'prettier_eslint': {
@@ -190,6 +190,11 @@ let s:default_registry = {
 \       'function': 'ale#fixers#swiftformat#Fix',
 \       'suggested_filetypes': ['swift'],
 \       'description': 'Apply SwiftFormat to a file.',
+\   },
+\   'apple-swift-format': {
+\       'function': 'ale#fixers#appleswiftformat#Fix',
+\       'suggested_filetypes': ['swift'],
+\       'description': 'Apply apple/swift-format to a file.',
 \   },
 \   'phpcbf': {
 \       'function': 'ale#fixers#phpcbf#Fix',
@@ -341,6 +346,11 @@ let s:default_registry = {
 \       'suggested_filetypes': ['json'],
 \       'description': 'Fix JSON files with jq.',
 \   },
+\   'protolint': {
+\       'function': 'ale#fixers#protolint#Fix',
+\       'suggested_filetypes': ['proto'],
+\       'description': 'Fix Protocol Buffer files with protolint.',
+\   },
 \   'perltidy': {
 \       'function': 'ale#fixers#perltidy#Fix',
 \       'suggested_filetypes': ['perl'],
@@ -406,6 +416,11 @@ let s:default_registry = {
 \       'suggested_filetypes': ['ada'],
 \       'description': 'Format Ada files with gnatpp.',
 \   },
+\   'nixfmt': {
+\       'function': 'ale#fixers#nixfmt#Fix',
+\       'suggested_filetypes': ['nix'],
+\       'description': 'A nix formatter written in Haskell.',
+\   },
 \   'nixpkgs-fmt': {
 \       'function': 'ale#fixers#nixpkgsfmt#Fix',
 \       'suggested_filetypes': ['nix'],
@@ -430,6 +445,16 @@ let s:default_registry = {
 \       'function': 'ale#fixers#ormolu#Fix',
 \       'suggested_filetypes': ['haskell'],
 \       'description': 'A formatter for Haskell source code.',
+\   },
+\   'ptop': {
+\       'function': 'ale#fixers#ptop#Fix',
+\       'suggested_filetypes': ['pascal'],
+\       'description': 'Fix Pascal files with ptop.',
+\   },
+\   'vfmt': {
+\       'function': 'ale#fixers#vfmt#Fix',
+\       'suggested_filetypes': ['v'],
+\       'description': 'A formatter for V source code.',
 \   }
 \}
 

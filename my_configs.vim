@@ -24,12 +24,17 @@
 " - vim-fugitive
 " - vim-startify
 " - vim-maximizer
+" - vim-surround
 "
 " author: Uthpala Herath
 " my fork: https://github.com/uthpalaherath/vimrc
 
 :set encoding=utf-8
 :set fileencoding=utf-8
+
+""" change current working directory to file dir
+autocmd BufEnter * silent! lcd %:p:h
+
 
 """ vim settings
 :set splitright
@@ -284,3 +289,7 @@ inoremap <silent><C-W>z <C-o>:MaximizerToggle<CR>
 
 """ snip-mate
 let g:snipMate = { 'snippet_version' : 1 }
+
+""" inner slashes
+onoremap <silent> i/ :<C-U>normal! T/vt/<CR>
+onoremap <silent> a/ :<C-U>normal! F/vf/<CR>
