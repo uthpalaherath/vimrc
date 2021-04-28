@@ -196,7 +196,7 @@ nnoremap <C-W>\ :vnew<CR>
 """ visual marks
 nnoremap <leader>m :SignatureRefresh<cr>
 
-""" run python scripts within vim with F5
+""" run python scripts within vim with F9
 "autocmd Filetype python nnoremap <buffer> <F5> :w<CR>:vert ter python3 "%"<CR>
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python' shellescape(@%, 1)<CR>
@@ -230,7 +230,7 @@ let g:slime_dont_ask_default = 1
 " map <Leader>s to start IPython
 "nnoremap <Leader>s :vert term <CR> :SlimeSend1 ipython --matplotlib<CR>
 nnoremap <Leader>s :vert term <CR> ipython --matplotlib<CR> <c-w><c-p> :SlimeConfig <CR>
-nnoremap <Leader>ss :term <CR> ipython --matplotlib<CR> <c-w><c-p> :SlimeConfig <CR>
+nnoremap <Leader>S :term <CR> ipython --matplotlib<CR> <c-w><c-p> :SlimeConfig <CR>
 
 " map <Leader>r to run script
 nnoremap <Leader>r :IPythonCellRun<CR>
@@ -293,3 +293,6 @@ let g:snipMate = { 'snippet_version' : 1 }
 """ inner slashes
 onoremap <silent> i/ :<C-U>normal! T/vt/<CR>
 onoremap <silent> a/ :<C-U>normal! F/vf/<CR>
+
+""" delete buffer when navigating back
+map <silent> <C-o> :bdelete<CR>
